@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Boton from './components/button';
+//Importar imagen
+import pinkHatLogo from './images/logo-1.png';
+//El componente App va a rendereizar dos botones
+import Contador from './components/counter';
+//Usaré Hooks
+import { useState } from 'react';
 
 function App() {
+
+  //Usaré Hooks
+  const [numeroClicks, setNumCliks] = useState(0);
+  //Valor inicial del estado = 0
+
+  //Definir función de Componente
+  //Esto es una función flecha
+  /**Puedes temporalmente mostrar un mensaje en la consola para verificar si el evento se ejecutó.
+  console.log('Click');
+  console.log('Reiniciar');
+  */
+
+  const ordenClick = () => {
+    setNumCliks(numeroClicks + 1); 
+  }
+  /**En las funciones flechas siempre ocuparemos ; */
+  const reiniciarContador = () => {
+    setNumCliks(0);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='logoContenedor'>
+        <img 
+        className='pictureLogo'
+        src={pinkHatLogo}
+        alt=''/>
+      </div>
+      <div className='contadorContenedor'>
+        <Contador numeroClicks = {numeroClicks} />
+        <Boton
+          texto = 'Click'
+          botonClick = {true}
+          ordenClick ={ordenClick} />
+        <Boton
+          texto = 'Reiniciar'
+          botonClick = {false}
+          ordenClick ={reiniciarContador} />
+      </div>
     </div>
   );
 }

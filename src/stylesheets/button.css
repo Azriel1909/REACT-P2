@@ -1,0 +1,48 @@
+:root {
+    /*Font family*/
+    --ff-primary:'Inconsolata', monospace;
+    --ff-secondary:'Oswald', sans-serif;
+    /*Coloured boxes*/
+    --color-backLight:white;
+    --color-dark:rgb(38, 38, 38);
+    --color-accent:rgb(243, 121, 176);
+    --color-secondary: #00BCD4;
+}
+
+button {
+    width: 300px;
+    height: 90px;
+    font-family: Geneva, sans-serif;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1em;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-backLight);
+}
+
+.esBotonCLick {
+    background-color: var(--color-backLight);
+    color: var(--color-dark);
+}
+
+.esBotonReiniciar {
+    background-color: var(--color-backLight);
+    color: var(--color-dark);
+}
+
+@media screen and (max-width: 1000px){
+    button {
+        height: 100%;
+        font-size: 1.5em;
+        width: 200px;
+        height: 50px;
+  }
+}

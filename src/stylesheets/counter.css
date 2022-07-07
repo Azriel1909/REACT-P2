@@ -1,0 +1,23 @@
+:root {
+  /*Font family*/
+  --ff-primary:'Inconsolata', monospace;
+  --ff-secondary:'Oswald', sans-serif;
+  /*Coloured boxes*/
+  --color-backLight:white;
+  --color-dark:rgb(38, 38, 38);
+  --color-accent:rgb(243, 121, 176);
+  --color-secondary: #00BCD4;
+}
+
+.contador {
+  min-width: 300px;
+  height: 300px;
+  font-size: 160px;
+  padding: 25px;
+  color: var(--color-backLight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid var(--color-backLight);
+  margin-bottom: 15px;
+}
